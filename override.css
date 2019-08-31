@@ -1,3 +1,6 @@
+/* 
+Customized @sarah_edo's css to increase the width and hide/unhide more things. 
+*/
 nav a div div,
 nav div div div {
   font-size: 16px !important;
@@ -6,10 +9,6 @@ nav div div div {
 }
 
 div[aria-label="Timeline: Trending now"] {
-  display: none;
-}
-
-a[aria-label="Tweet"] {
   display: none;
 }
 
@@ -26,12 +25,13 @@ header {
 }
 
 div[data-testid="primaryColumn"] {
-  max-width: 650px !important;
-  box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.3);
+  max-width: 900px !important;
   background-color: rgb(21, 32, 43);
   border-color: #0d161e !important;
 }
-
+div[data-testid="primaryColumn"] > div > div:nth-child(4) {
+  max-width: 100%;
+}
 body {
   background: #151e27 !important;
   font-family: "Avenir", Helvetica, Arial, sans-serif !important;
@@ -54,7 +54,7 @@ article {
   border-color: #151e27 !important;
   padding: 20px 10px 5px 10px !important;
   font-size: 17px;
-  max-width: 650px !important;
+  max-width: 900px !important;
   transition: none !important;
 }
 
@@ -98,16 +98,7 @@ article div div a + div:empty {
 }
 
 div[data-testid="sidebarColumn"] {
-  visibility: hidden !important;
-  width: 125px !important;
-}
-
-form[aria-label="Search Twitter"][role="search"] {
-  visibility: visible !important;
-  position: fixed !important;
-  width: 270px !important;
-  top: 8px;
-  right: 20px;
+  display: none !important;
 }
 
 div[aria-modal="true"] div div div div div div div div div div div div div {
@@ -124,11 +115,6 @@ a[aria-label="Profile"] img {
   height: 30px;
   position: absolute;
   opacity: 1;
-}
-
-svg[aria-label="Verified account"] {
-  /* lol */
-  display: none;
 }
 
 div[role="menu"],
